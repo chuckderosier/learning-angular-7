@@ -2,6 +2,7 @@
     Welcome to {{ title }}!
   </h1>
   <div class="container">
+    <!-- FOR ADD SERVER BUTTON AND RENDER -->
     <div class="row">
       <div class="col-xs-a2">
         <h2>My Servers</h2>
@@ -10,12 +11,15 @@
         <ul class="list-group">
           <li
           class="list-group-item"
-          *ngFor="let servers of servers; let i = index"
+          *ngFor="let server of servers; let i = index"
           (click)="onRemoveServer(i)">{{ servers }}
         </li>
         </ul>
+        <!-- FOR CUSTOM DIRECTIVE -->
+        <P appCustomDirectiveStyles>STYLED BY CUSTOM DIRECTIVE</P>
       </div>
     </div>
   </div>
 
+  
 <router-outlet></router-outlet>
